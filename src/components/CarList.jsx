@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeCar } from "../store";
 import { createSelector } from "@reduxjs/toolkit";
 
+// updated to use this format to handle RTK rerender warning
 const memoizedCars = createSelector(
   [(state) => state.cars.data, (state) => state.cars.searchTerm],
   (data, searchTerm) =>
